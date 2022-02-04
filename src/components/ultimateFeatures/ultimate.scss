@@ -1,0 +1,99 @@
+@import "../../styles/media.scss";
+
+.ultimate_features_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10%;
+    .features_img{
+        @include xl { display: none; }
+    }
+    @include xl { 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .ultimate_features_content_container{
+        width: 40%;
+        margin-left: 10%;
+        @include lg { 
+            width: 100%;
+            margin-left: 0; 
+        }
+        .ultimate_features_title, .ultimate_features_text{
+            font-family: 'Poppins', sans-serif;
+        }
+        .ultimate_features_title{
+            width: 70%;
+            font-size: 42px;
+            color: #242f51;
+            font-weight: 600;
+            margin: 0;
+            @include lg {  width: 100%;  font-size: 36px; }
+        }
+        .ultimate_features_text{
+            width: 60%;
+            font-size: 14px;
+            font-weight: 100;
+            margin-bottom: 10%; 
+            color: #727272;
+            @include lg {  width: 100%;  font-size: 22px;}
+        }
+
+        .ultimate_feature_content_container{
+            display: flex;
+            flex-wrap: wrap;
+            @include lg { 
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin: 0 20px;
+            }
+            .ultimate_feature_container{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: start;
+                width: 40%;
+                margin: 15px;
+                @include lg { 
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                @include sm { 
+                    width: 100%;
+                    margin: 0;
+                }
+                .ultimate_feature_img{
+                    width: 50%;
+                    margin-right: 30px;
+                    @include lg { 
+                        width: 30%;
+                        margin: 0;
+                    }
+                    @include md { 
+                        width: 30%;
+                        margin: 0;
+                    }
+                    @include sm { 
+                        width: 30%;
+                        margin: 0;
+                    }
+                }
+                .ultimate_feature_text_container{
+                    .ultimate_feature_title{
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    .ultimate_feature_text{
+                        font-family: 'Poppins', sans-serif;
+                        color: #727272;
+                    }
+                }
+            }
+        }
+    }
+}

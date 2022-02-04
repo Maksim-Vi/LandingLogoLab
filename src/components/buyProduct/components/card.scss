@@ -1,0 +1,104 @@
+@import "../../../styles/media.scss";
+
+.card_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    @include md {  
+        overflow-x: auto;
+        flex-direction: column;
+        width: 100%; 
+        margin: 0 20px;
+    }
+    .card_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 35%;
+        height: 450px;
+        background-color: #fff;
+        border-radius: 10px;
+        transition: .3s;
+        @include lg {  
+            width: 50%;
+            margin: 3%;
+            height: auto;
+        }
+
+        @include sm {  
+            width: 70%;
+            margin: 3% auto;
+            height: auto;
+        }
+        .top_card{
+            padding: 20px 0;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            background-color: #a3a3a32b;
+            font-family: 'Poppins', sans-serif;
+            @include md { padding: 1px 0; }
+            .price_container{
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+                color: #727272;
+                font-size: 14px;
+                .price{
+                    margin: 0;
+                    color: #242f51;
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+            }
+            .title{
+                margin: 0;
+                color: #242f51;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .sub_title{
+                margin: 0 0 30px 0;
+                color: #727272;
+                font-size: 14px;
+                @include md { margin: 0 0 10px 0; }
+            }
+        }
+        .middle_card{
+            padding: 20px 0;
+            font-family: 'Poppins', sans-serif;
+            color: #727272;
+            font-size: 14px;
+        }
+        .bottom_card{
+            .custom_button{
+                margin-bottom: 10px;
+                &:active {
+                    border: 1px solid #000;
+                }
+            }
+            .trail{
+                font-family: 'Poppins', sans-serif;
+                color: #2500f9;
+                font-size: 12px;
+                font-weight: 700;
+                @include sm {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        &:hover{
+            transform: scale(1.05);
+            border: 1px solid #cecece;
+            @include lg {
+                transform: scale(1);
+                border: none;
+            }
+            @include sm {
+                transform: scale(1);
+                border: none;
+            }
+        }
+    } 
+}

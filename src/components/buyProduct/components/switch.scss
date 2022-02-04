@@ -1,0 +1,40 @@
+@import "../../../styles/media.scss";
+
+
+.switch_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5% auto;
+    width: 20%;
+    border-radius: 20px;
+    border: 1px solid rgb(190, 190, 190);
+    background: rgba(160, 160, 160, 0.041);
+    @include lg {  width: 50%; }
+    @include md {  width: 70%; }
+    .switch_first, .switch_second{
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #969696;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        transition: .5s;
+    }
+    .switch_first{
+        flex: 1;
+    }
+    .switch_second{
+        flex: 1;
+    }
+
+    .active{
+        color: #eeeeee;
+        border-radius: 20px;
+        background-color: blue;
+        transition: .5s;
+        border-radius: 20px;
+    }
+}

@@ -1,0 +1,262 @@
+@import "../../styles/media.scss";
+
+.header_wrapper{
+    .header_top {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        width: 80%;
+        margin-top: 50px;
+        .links_container {
+            display: flex;
+            align-items: center;
+            @include lg { display: none;}
+            .link,
+            .custom_button {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .link {
+                text-decoration: none;
+                color: #242f51;
+                font-family: "Poppins", sans-serif;
+                font-size: 18px;
+                transition: 0.5s;
+                &:hover {
+                    transform: scale(1.05);
+                    cursor: pointer;
+                    color: #050d27;
+                }
+            }
+        }
+    }
+    
+    .header_middle {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 0;
+        width: 95%;
+        height: 85%;
+        .header_text_container {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 30%;
+            text-wrap: wrap;
+            font-family: "Poppins", sans-serif;
+            @include lg {
+                z-index: 1;
+                width: 70%;
+                height: 70%;
+                align-items: center;
+                justify-content: space-around; 
+                text-align: center;
+            }
+            @include md {
+                width: 80%;
+                height: 80%;
+                align-items: center;
+                justify-content: space-around;
+                text-align: center;
+            }
+            .mark {
+                font-size: 12px;
+                text-align: center;
+                padding: 5px 50px 5px 50px;
+                border-radius: 20px;
+                background-color: #e2eaed;
+                position: relative;
+                &::before {
+                    content: "";
+                    display: flex;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("../../assetss/header/mark.png");
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-size: contain;
+                }
+            }
+            .title {
+                font-size: 50px;
+                font-weight: 800;
+                margin: 0;
+                @include lg {
+                    font-size: 60px;
+                }
+                @include md {
+                    font-size: 32px;
+                }
+            }
+            .text {
+                font-size: 14px;
+                color: #727272;
+                @include lg {
+                    font-size: 22px;
+                    margin: 0;
+                }
+                @include md {
+                    font-size: 22px;
+                    margin: 0;
+                }
+            }
+        }
+        .header_phone_img {
+            height: 100%;
+            @include lg {
+                position: absolute;
+                z-index: 0;
+                opacity: 0.4;
+                height: 70%;
+                transform: rotate(25deg);
+            }
+            @include md {
+                display: none;
+            }
+        }
+        .buttons_container {
+            display: flex;
+            align-items: center;
+            @include lg {
+                width: 50%;
+                flex-direction: column;
+                .custom_button{
+                    width: 100%;
+                }
+            }
+            @include md {
+                width: 100%;
+                flex-direction: column;
+                .custom_button{
+                    width: 100%;
+                }
+            }
+            & a {
+                margin-left: 20px;
+                text-decoration: none;
+                color: #2500f9;
+                @include lg {
+                    margin: 15px;
+                }
+                @include md {
+                    margin: 15px;
+                }
+            }
+        }
+    }
+    
+    .header_bottom {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        background-image: url("../../assetss/header/bottom-bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .butger_container{
+        display: none;
+        @include lg {display: flex;}
+        .Menu{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 55vw;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.404);
+            z-index: 1001;
+            flex-direction: column;
+            opacity: 0;
+            overflow: scroll;
+            .link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Work Sans', sans-serif;
+                cursor: auto;
+                padding: 1rem 2rem;
+                font-size: 26px;
+                color: #fff;
+                text-decoration: none;
+                @media (max-width: 600px) {
+                    font-size: 24px;
+                }
+                &:hover {
+                    color: rgb(2, 2, 2);
+                    cursor: pointer;
+                }     
+            }
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+        }
+        .btnHamburger{
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+            background: transparent;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            z-index: 1001;
+          
+            .Line {
+                position: relative;
+                width: 2rem;
+                height: 0.25rem;
+                border-radius: 10px;
+                background-color: #000;
+    
+                transition: all 0.5s linear;
+                transform-origin: 1px;
+            }
+            @media (max-width: 600px) {
+                right: 3vw;
+                left: initial;
+            }
+            
+        }
+    
+        .MenuActive{
+            opacity: 1;
+            transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+        }
+    
+        .btnHamburgeActive{
+            right: 37vw;
+            @media (max-width: 600px) {
+                right: initial;
+                left: 0;
+            }
+        }
+    
+        .divFActive {
+            transform:rotate(45deg);
+        }
+        .divSActive {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        .divTActive {
+            transform: rotate(-45deg);
+        }
+    }    
+}

@@ -1,0 +1,9 @@
+@import './styles/media.scss';
+
+.App {
+    background-color: #f7f7f7b3;
+    @include md { 
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+}

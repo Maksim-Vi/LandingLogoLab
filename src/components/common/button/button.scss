@@ -1,0 +1,26 @@
+@import "../../../styles/media.scss";
+
+.custom_button{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    background-color: #2500f9;
+    transition: .5s;
+    @include md { transition: none;}
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+        @include md { transform: scale(1);}
+    }
+    .button_text{
+        color: #eeeeee;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        transition: .5s;
+        @include md { transition: none;}
+    }
+}

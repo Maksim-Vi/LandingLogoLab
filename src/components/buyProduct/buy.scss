@@ -1,0 +1,40 @@
+@import "../../styles/media.scss";
+
+.buy_product_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10%;
+    .buy_product_title, .buy_product_text{
+        width: 40%;
+        text-align: center;
+        color: #242f51;
+        font-family: 'Poppins', sans-serif;
+        @include lg {  width: 90%; }
+    }
+    .buy_product_title{
+        font-size: 36px;
+        font-weight: 600;
+        margin: 0;
+    }
+    .buy_product_text{
+        font-size: 14px;
+        font-weight: 100;
+        color: #727272;
+        @include lg { font-size: 18px; }
+        @include sm { font-size: 22px; }
+    }
+    
+    .buy_product_content_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .divider{
+        margin: 10% 0 5% 0;
+    }
+}
